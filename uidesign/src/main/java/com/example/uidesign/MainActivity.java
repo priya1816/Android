@@ -17,12 +17,18 @@ public class MainActivity extends AppCompatActivity {
 
 
        Button btn = (Button)findViewById(R.id.btnOkay);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
+        //btn.setOnClickListener(new View.OnClickListener() {
+          btn.setOnClickListener(this::date);
+       /* @Override
             public void onClick(View v) {
                 TextView txt = (TextView) findViewById(R.id.txtDate);
                 txt.setText(new Date().toString());
             }
-        });
+        });*/
             }
+
+    private void date(View view) {
+        TextView txt = (TextView) findViewById(R.id.txtDate);
+        txt.setText(new Date().toString());
+    }
 }

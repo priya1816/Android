@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
 
     defaultConfig {
-        applicationId "com.example.uidesign"
+        applicationId "com.example.interactivitycommunication"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
@@ -23,9 +23,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        targetCompatibility 1.8
+
+
+    compileOptions{
         sourceCompatibility 1.8
+        targetCompatibility 1.8
     }
 }
 
