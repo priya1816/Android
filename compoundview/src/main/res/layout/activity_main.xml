@@ -8,25 +8,29 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.interactivitycommunication.MainActivity">
+    tools:context="com.example.compoundview.MainActivity">
 
-   <Button
-       android:id="@+id/btnAndroid"
+   <HorizontalScrollView
+       android:id="@+id/horizontalScroll"
        android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="Android"/>
+       android:layout_height="200dp"
+       android:padding="20dp">
+
+       <LinearLayout
+           android:id="@+id/layoutInner"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+       </LinearLayout>
+   </HorizontalScrollView>
 
     <Button
-        android:id="@+id/btnApple"
+        android:id="@+id/btnAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Apple"
-        android:layout_below="@+id/btnAndroid"/>
-    <TextView
-        android:id="@+id/txtRes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnApple"
-        android:gravity="center"
-        android:textSize="30sp"/>
+        android:text="Add"
+        android:layout_alignParentBottom="true"/>
+
+
 </RelativeLayout>

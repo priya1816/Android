@@ -1,1 +1,1 @@
-include ':app', ':uidesign', ':viewproperties', ':relativelayout', ':interactivitycommunication'
+include ':app', ':uidesign', ':viewproperties', ':relativelayout', ':interactivitycommunication', ':compoundview'

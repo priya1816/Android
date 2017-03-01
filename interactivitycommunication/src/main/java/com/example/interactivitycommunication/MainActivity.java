@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private void onApple(View view) {
 
         Class<Activity_next> cls = Activity_next.class;
+
         Bundle bundle = new Bundle();
         bundle.putString("one","iOS5");
         bundle.putString("two","iOS6");
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtras(bundle);
 
         startActivity(intent);
+        startActivityForResult(intent,333);
     }
     private void onMango(View view){
 
@@ -38,5 +41,21 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtras(bundle);
 
         startActivity(intent);
+        startActivityForResult(intent,333);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == 333){
+            Bundle bundle = data.getExtras();
+            if(bundle !=null){
+
+                String res = bundle.getString("res");
+
+                ((TextView)findViewById(R.id.txtRes)).setText(res);
+            }
+        }
     }
 }
